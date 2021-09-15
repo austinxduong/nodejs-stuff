@@ -1,15 +1,10 @@
-console.log("0. To check your node version, run node -v in terminal")
+function helloWorld(firstParameter) {
+    console.log("Hello " + firstParameter);
+}
+//call the function see line 6
 
-console.log("1. Hello World, from austi d");
+helloWorld('returning first parameter');
 
-console.log("2. What is node.js?")
-
-console.log("3. Runtime environment for executing javascript code (in a server or local development environment instead of browser")
-
-console.log("4. In Terminal type node app.js. Console log message nows shows in Terminal")
-
-console.log("5. Type nodemon apps.js")
-
-console.log("6. What is nodemon?")
-
-console.log("7. A utility that monitors for changes, and automatically restarts the server for you. Good for productivity")
+// run node on terminal, and pass file name (app.js) as an argument
+// (ie. node app.js)
+// What happends under the hood? Node passes app.js to googles' v8 engine for execution
