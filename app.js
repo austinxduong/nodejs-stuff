@@ -17,9 +17,10 @@ helloWorld('returning first parameter');
 // now lets just turn it into a variable
 const login = require('./login');
 // console.log(login);
-login.log('hi its austi');
+login.log('Hi it\'s austi, im loading a module');
 
 
 // in the terminal, we should see a returned object for our login module. verified as a console
 // now, lets call the login module in app.js
 // we now see "hi it's austi" in the terminal 
+
