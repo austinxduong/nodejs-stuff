@@ -79,4 +79,32 @@ const pizza3 = ['pepperoni', 'cheese', 'supreme'];
 pizza3[3] = 'greek styled';
 console.log(pizza3.length);
 
+// Function example:
+// functions execute a task, or calculates a value
+// now we write a statement inside the curlies, aka the "logic" of the function
+// we have to remember to terminate the statement with a semicolon
+// below, we just declared a function
+function austiFavRestaurant() {
+    console.log('Fogo De Chao');
+}
+//to call the function, we do this
+austiFavRestaurant();
 
+// lets inject a variable inside the parentheses, as a parameter. line 97
+// this variable only works inside this function, and unaccessible outside this function. line 97
+// now, we will concactenate two strings by adding the variable. line 98
+// then, we will define the variables value (inside the parenthesis), when we call the function. line 101
+function austiFavRestaurant2(flavor) {
+    console.log('Fogo De Chao' + flavor)
+}
+
+austiFavRestaurant2(' is Brazialian Flavored');
+// 'is Brazilian Flavored' is considered an argument to the austiFavRestaurant2 function
+// 'flavor' is a parameter to the austiFavRestaurant2 function
+
+function austiFavRestaurant3(flavor, taste) {
+    console.log('Fogo De Chao' + flavor + ' ' + taste)
+}
+
+// adding 2 concactenation 
+austiFavRestaurant3(' is Brazilian Flavored', 'and yummy');
