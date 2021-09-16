@@ -108,3 +108,11 @@ function austiFavRestaurant3(flavor, taste) {
 
 // adding 2 concactenation 
 austiFavRestaurant3(' is Brazilian Flavored', 'and yummy');
+
+//^^ the 1st Function example is "performing a task"
+
+//lastly, lets create a function that calculate a value
+function add(number) {
+    return number + number;
+}
+console.log(add(12));
