@@ -1,3 +1,4 @@
+//app.js is our main module
 function helloWorld(firstParameter) {
     console.log("Hello " + firstParameter);
 }
