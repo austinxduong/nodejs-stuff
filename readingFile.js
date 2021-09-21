@@ -13,6 +13,6 @@ fs.readFile('helloWorld.txt', (err, data) => {
 console.log('testing asynchronous nature of node');
 
 // under the hood asynchornous explanation: node reads the file first on line 5
-// while node is busy reading the file first, its going to move on execute our console log on line 13.
-// once node is done reading the file, node will return the data on line 10
+// while node is busy reading the file first, its going to move on, & execute our console log on line 13.
+// once node is done reading the file on line 5, node will return the data on line 10
 // this is why our console.log on line 13 appears first, before our "Hello World" txt file
