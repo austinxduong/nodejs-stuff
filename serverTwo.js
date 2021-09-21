@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 fs.readFile('helloWorld.txt', (err, data) => {
-    if (err) {
+    if (err) { //<-- line 6 thru 9 is what we call "error handling"
         console.error(err);
         return;
     }
