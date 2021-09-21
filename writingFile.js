@@ -2,9 +2,9 @@
 // destructuring means, we only want to pull out a nested value from an object/array. in this case 'fs'.
 const { writeFile, writeFileSync } = require('fs');
 
-const newText = 'new Hello World'
+const newText = '\nnew Hello World'
 
-writeFile('helloWorld.txt', newText, (err) => {
+writeFile('helloWorld.txt', newText, { flag: 'a' }, (err) => {
     if (err) {
         console.error(err);
         return;
