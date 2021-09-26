@@ -74,6 +74,9 @@ const pizza2 = ['pepperoni', 'cheese', 'supreme'];
 pizza2[3] = 'greek styled';
 console.log(pizza2);
 
+// another way to add another element to an array is to use the ".push" method
+//.push() is an array method. It is also a built-in javascript function
+// below, we passed in 'spicy greek styled' as an argument. Which adds it as our 3rd indexed element, inside the array
 const pizza3 = ['pepperoni', 'cheese', 'supreme'];
 pizza3.push('spicy greek styled');
 console.log(pizza3);
