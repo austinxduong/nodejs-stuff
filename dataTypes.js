@@ -43,7 +43,7 @@ console.log(austi);
 console.log(austi.age);
 console.log(austi.hungry);
 
-//we can also change these values
+//we can also change/update/transform these values
 austi.age= '11';
 console.log(austi.age);
 
@@ -74,10 +74,14 @@ const pizza2 = ['pepperoni', 'cheese', 'supreme'];
 pizza2[3] = 'greek styled';
 console.log(pizza2);
 
-//we can also access the length of elements inside the array
 const pizza3 = ['pepperoni', 'cheese', 'supreme'];
-pizza3[3] = 'greek styled';
-console.log(pizza3.length);
+pizza3.push('spicy greek styled');
+console.log(pizza3);
+
+//we can also access the length of elements inside the array
+const pizza4 = ['pepperoni', 'cheese', 'supreme'];
+pizza4[3] = 'greek styled';
+console.log(pizza4.length);
 
 // Function example:
 // functions execute a task, or calculates a value

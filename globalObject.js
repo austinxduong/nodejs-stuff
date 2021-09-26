@@ -9,5 +9,4 @@ console.log("3. piece of code that contains functionality. functionality that ca
 
 console.log(module)
 
-// now lets create a 'module'
-// see login.js
+// global object vs function objects:
