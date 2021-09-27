@@ -70,3 +70,14 @@ const austi = ['austi', 'is', 'a', 'software', 'engineer'];
 austi.splice(3, 0, 'chill');
 console.log(austi);
 
+//.reverse() will reverse the array
+const taco = ['tortilla', 'refried beans', 'grilled chicken', 'cheese', 'salsa', 'hot sauce'];
+console.log(taco.reverse());
+console.log(taco); // <-- the array gets mutated when using .reverse() array method
+
+//.concat() array method, joins two new arrays together
+// lets cook up 1 huge array of; austi + taco
+// we get an array of mixed taco ingredients, and austi being a chill software engineer 
+const austiTaco= taco.concat(austi)
+console.log(austiTaco);
+
