@@ -30,3 +30,21 @@ console.log(pizza1);
 const pizza2 = ['pepperoni', 'cheese', 'supreme'];
 pizza2.shift()
 console.log(pizza2);
+
+// .slice() slice a chunk of an array, and returns that chunk?
+// but what chunk? all/each elements between the first index you select, to the last (last index isn't included in the chunk).
+// for example, a pizza slice. the tip of the pizza slice is a little burnt (don't include), and the crust is burnt too (don't include)
+// result: in our console we returned everything between index [1], to index [5]; BUT.. the first index is included in array, last index is not.
+// this happens when we pass in two index parameters as an arguement.
+const burntPizza = ['tip', 'tip middle', 'middle', 'top middle', 'top', 'crust'];
+console.log(burntPizza.slice(1,5));
+
+// however... lets say the crust isn't burnt, and we want everything but the tip from this slice of pizza (yummy! garlic butter sauce please)
+// now, we the very last index is included, we just passed in one index parameter, as an argument
+const notBurntCrustPizza = ['tip', 'tip middle', 'middle', 'top middle', 'top', 'crust'];
+console.log(notBurntCrustPizza.slice(1));
+
+// finally.... if the whole pizza is not burnt and totally yummy?
+// we can make a whole carbon copy of the array. Simply pass no argument in the slice array method.
+const notBurntYummyPizza = ['tip', 'tip middle', 'middle', 'top middle', 'top', 'crust'];
+console.log(notBurntYummyPizza.slice());
