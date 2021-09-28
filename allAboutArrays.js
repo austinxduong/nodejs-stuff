@@ -78,6 +78,11 @@ console.log(taco); // <-- the array gets mutated when using .reverse() array met
 //.concat() array method, joins two new arrays together
 // lets cook up 1 huge array of; austi + taco
 // we get an array of mixed taco ingredients, and austi being a chill software engineer 
-const austiTaco= taco.concat(austi)
+const austiTaco = taco.concat(austi)
 console.log(austiTaco);
 
+// . join method return an array of a single string connected by a character you choose
+
+const preschoolSingleFileLine = ['student1', 'student2', 'student3', 'student4', 'student5'];
+console.log(preschoolSingleFileLine.join('-')) //<--- now lets make sure all students are in a single file line
+//our console log returns this: // student1-student2-student3-student4-student5
