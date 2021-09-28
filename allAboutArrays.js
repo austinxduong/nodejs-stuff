@@ -100,8 +100,25 @@ let i = 'austi\'s';
         }
 });
 
-/*  austi's Checking Account: You Withdrew -100
+/*  below is our returned values
+    austi's Checking Account: You Withdrew -100
     austi's Checking Account: You Deposited 20.00
     austi's Checking Account: You Withdrew -3.33
     austi's Checking Account: You Deposited 4.44 
+*/
+
+// .map() array method is also a higher order function. meaning we pass in a a call back function as a parameter
+
+const creditToCash= '$';
+
+const checkingAccountCash= checkingAccounts.map(function(convert){
+    return creditToCash + convert;
+});
+
+console.log(checkingAccounts);
+console.log(checkingAccountCash)
+
+/* below is our returned values
+[ '-100', '20.00', '-3.33', '4.44' ]
+[ '$-100', '$20.00', '$-3.33', '$4.44' ]
 */
