@@ -122,3 +122,12 @@ console.log(checkingAccountCash)
 [ '-100', '20.00', '-3.33', '4.44' ]
 [ '$-100', '$20.00', '$-3.33', '$4.44' ]
 */
+
+// .filter array method will filter out elements, that meet a specific condition
+// below example, will filter out past due payments elements within the array
+const pastDuePayments= checkingAccounts.filter(function(collect){
+    return collect < 0;
+});
+console.log(pastDuePayments)
+
+// [ '-100', '-3.33' ] <-- these are the past due payments we need to collect from client
