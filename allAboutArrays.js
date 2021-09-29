@@ -125,7 +125,7 @@ console.log(checkingAccountCash)
 
 // .filter array method will filter out elements, that meet a specific condition
 // below example, will filter out past due payments elements within the array
-const pastDuePayments= checkingAccounts.filter(function(collect){
+const pastDuePayments= checkingAccounts.filter(function(collect){ // <-- all elements of array are passed through this callback function. if condition = true, a new array is returned with those selected elements (the past due payments :D)
     return collect < 0;
 });
 console.log(pastDuePayments)
