@@ -132,10 +132,22 @@ console.log(pastDuePayments)
 
 // [ '-100', '-3.33' ] <-- these are the past due payments we need to collect from client
 
-// .reduce() array method
+// .reduce() array method to get sum total of elements
+// the customer has past due balances, but around noon they submitted a purchase order with a deposit of $2222
+// were going to apply that purchase order deposit to waive their past due payments, reconciling their balance
+const add = waive => waive.reduce((element1, element2) => element1 + element2, 2222); //<-- 2222 is the starting value (the purchase order deposit)
+
+const waive = [-100, -3.33];
+const total = add(waive);
+
+console.log(total);
+
+//returned // 2118.67 <--- customer balance is reconciled. yayyyy :D
 
 
-const pizzaSoup = pizza.reduce(function(mixItAllUp, currentIngredients,){
+
+
+const pizzaSoup = pizza.reduce(function(mixItAllUp, currentIngredients){
 
 return mixItAllUp + currentIngredients ;
 
