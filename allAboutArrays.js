@@ -131,3 +131,16 @@ const pastDuePayments= checkingAccounts.filter(function(collect){ // <-- all ele
 console.log(pastDuePayments)
 
 // [ '-100', '-3.33' ] <-- these are the past due payments we need to collect from client
+
+// .reduce() array method
+
+
+const pizzaSoup = pizza.reduce(function(mixItAllUp, currentIngredients,){
+
+return mixItAllUp + currentIngredients ;
+
+},'but first RANCH!!! :D ...'); //<-- we can add a string data type, which will default as the beginning of the reduced array
+console.log(pizzaSoup);
+
+// returned below:
+// but first RANCH!!! :D ...pepperonicheesesupremelemon zest greek styled
