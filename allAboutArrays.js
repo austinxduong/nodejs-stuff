@@ -132,6 +132,7 @@ console.log(pastDuePayments)
 
 // [ '-100', '-3.33' ] <-- these are the past due payments we need to collect from client
 
+
 // .reduce() array method to get sum total of elements
 // the customer has past due balances, but around noon they submitted a purchase order with a deposit of $2222
 // were going to apply that purchase order deposit to waive their past due payments, reconciling their balance
@@ -145,8 +146,8 @@ console.log(total);
 //returned // 2118.67 <--- customer balance is reconciled. yayyyy :D
 
 
-
-
+// another way to use .reduce() array method using pizza imagination.
+// we will use .reduce() array method to combina all elements, into 1 single element. aka pizzzaaa soup! :D
 const pizzaSoup = pizza.reduce(function(mixItAllUp, currentIngredients){
 
 return mixItAllUp + currentIngredients ;
