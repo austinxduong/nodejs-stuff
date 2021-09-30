@@ -147,10 +147,10 @@ console.log(total);
 
 // 2nd way to utilize .reduce() array method.
 // here, we are calculating the total sum of past due balances.
-// originally, on line 154 I wrote ``return accumulator + currentValue``. But it logged all the elements into 1 single element all mushed together. It didn't add. Why?
+// originally, on line 158 I wrote ``return accumulator + currentValue``. But it logged all the elements into 1 single element all mushed together. It didn't add. Why?
 // Number(currentValue) converts the strings into a number. 
-// alternatively, I could've had my elements in the array and number data types, and accumulator + Number would log the total sum of past due balances.
-// additionally, on line 156, the 3rd and 4th parameters aren't need. But what do they represent?
+// alternatively, I could've had my elements in the array and number data types, and accumulator + currentValue would log the total sum of past due balances.
+// additionally, on line 157, the 3rd and 4th parameters aren't need. But what do they represent?
 // i = is the index(s), and arr = the array. the extra parameters is a reference on how the call back function loops through each index, and iterates through the whole array.
 const pastDueBalance = ['-100.00', '-8888.00', '-22.00', '-44.00'];
 
