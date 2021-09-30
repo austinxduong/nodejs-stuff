@@ -142,9 +142,23 @@ const waive = [-100, -3.33];
 const total = add(waive);
 
 console.log(total);
-
 //returned // 2118.67 <--- customer balance is reconciled. yayyyy :D
 
+
+// 2nd way to utilize .reduce() array method
+// here, we are calculating the total sum of past due balances
+// originally, on line 154 I wrote ``return accumulator + currentValue``. But it logged all the elements into 1 single element all mushed together. It didn't add. Why?
+// Number(currentValue) converts the strings into a number. 
+// alternatively, I could've had my elements in the array and number data types, and accumulator + Number would log the total sum of past due balances
+// additionally, on line 156, the 3rd and 4th parameters aren't need. But what do they represent?
+// i = is the index(s), and arr = the array. the extra parameters is a reference on how the call back function loops through each index, and iterates through the whole array
+const pastDueBalance = ['-100.00', '-8888.00', '-22.00', '-44.00'];
+
+const totalPastDue = pastDueBalance.reduce(function(accumulator, currentValue, i, arr){
+    return accumulator + Number(currentValue);
+},0);
+
+console.log(totalPastDue);
 
 // another way to use .reduce() array method using pizza imagination.
 // we will use .reduce() array method to combina all elements, into 1 single element. aka pizzzaaa soup! :D
@@ -158,3 +172,17 @@ console.log(pizzaSoup);
 
 // returned below:
 // but first RANCH!!! :D ...pepperonicheesesupremelemon zest greek styled
+
+// reduce 3rd flavor
+
+// const arr= ['10', '2', '30', '40'];
+
+// const totalSum = arr.reduce(function(accumulator, currentValue, i, arr) {
+
+// return accumulator + Number(currentValue);
+// },0);
+
+// console.log(totalSum);
+
+
+
