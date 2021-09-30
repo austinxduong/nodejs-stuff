@@ -87,13 +87,8 @@ const preschoolSingleFileLine = ['student1', 'student2', 'student3', 'student4',
 console.log(preschoolSingleFileLine.join('-')) //<--- now lets make sure all students are in a single file line.
 //our console log returns this: // student1-student2-student3-student4-student5
 
-<<<<<<< HEAD
 // forEach method is considred a higher order function (meaning were passing a callback function as an argument).
 // forEach iterates through each element, and processes the callback function for each element.
-=======
-// forEach method is considred a higher order function (meaning were passing a callback function as an argument)
-// forEach iterates through each element, and processes the callback function for each element
->>>>>>> f03948e923807e55a6288567cc2f7e5ecc79fad4
 const checkingAccounts = ['-100', '20.00', '-3.33', '4.44'];
 let i = 'austi\'s';
 
@@ -112,11 +107,7 @@ let i = 'austi\'s';
     austi's Checking Account: You Deposited 4.44 
 */
 
-<<<<<<< HEAD
 // .map() array method is also a higher order function. meaning we pass in a a call back function as a parameter.
-=======
-// .map() array method is also a higher order function. meaning we pass in a a call back function as a parameter
->>>>>>> f03948e923807e55a6288567cc2f7e5ecc79fad4
 
 const creditToCash= '$';
 
