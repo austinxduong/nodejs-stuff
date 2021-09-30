@@ -160,6 +160,18 @@ const totalPastDue = pastDueBalance.reduce(function(accumulator, currentValue, i
 
 console.log(totalPastDue);
 
+// what if the customer send in a Purchase Order with a deposit of 222,222.00 dollars?
+const pastDueBalance0 = ['-100.00', '-8888.00', '-22.00', '-44.00'];
+
+const totalPastDue0 = pastDueBalance.reduce(function(accumulator, currentValue, i, arr){
+    return accumulator + Number(currentValue);
+},222222.00); //<-- adjust the currentValue here
+
+console.log(totalPastDue0);
+
+// this is what we returned below
+// 213168 <--- now the customer has no longer past due balance. $222,222.00 less $90.54
+
 // another way to use .reduce() array method using pizza imagination.
 // we will use .reduce() array method to combina all elements, into 1 single element. aka pizzzaaa soup! :D
 // .reduce loops through each index, a executes the callback function for each element (iteration)
