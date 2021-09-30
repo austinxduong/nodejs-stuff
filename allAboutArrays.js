@@ -148,6 +148,7 @@ console.log(total);
 
 // another way to use .reduce() array method using pizza imagination.
 // we will use .reduce() array method to combina all elements, into 1 single element. aka pizzzaaa soup! :D
+// .reduce loops through each index, a executes the callback function for each element (iteration)
 const pizzaSoup = pizza.reduce(function(mixItAllUp, currentIngredients){
 
 return mixItAllUp + currentIngredients ;
