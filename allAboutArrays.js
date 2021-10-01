@@ -199,11 +199,14 @@ console.log(".findIndex() method -->",filterArrayMethod0);
 // lets get more mathy! using findIndex (oh gosh.... i suck at math).
 // here we goooo....... D:
 
-const beautifulArray = ['0,', '2', '8', '12','22', '33', '44', '55', '60', '88'];
+const beautifulArray = [2, 8, 12, 22, 33, 44, 55, 60, 88];
 
-findDivisableIndexbyEleven = beautifulArray.findIndex(grabFirstDivisableNum=> grabFirstDivisableNum% 11 === 0); // <-- this reads return the first element by its index, that is divisble by 11
+findDivisableIndexbyEleven = beautifulArray.findIndex(grabFirstDivisableNum => grabFirstDivisableNum % 11 === 0);  // <-- this reads return the first element by its index, that is divisble by 11
 console.log(findDivisableIndexbyEleven);
-// 4 <-- it returne index 4 of the array = '22' 
+// the % is a modulo operator. it reads loop through each index, iterating throughout the whole array, & find/return the first index that is divisble by 11 that has a remainder of 0
+// 3 <-- it returned index 3 of the array = '22' 
+
+
 
 
 
