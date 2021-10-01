@@ -185,7 +185,15 @@ console.log(".reduce() method-->",pizzaSoup);
 // .find() array method
 // it is a twin of .filter() --> the difference is... it just returns the first element that meets the condition. It returns as just one as an element. Not inside an array.
 
-const filterArrayMethod = pastDueBalance.find(grabFirstOne=> grabFirstOne<0) //<-- should just return the '-100.00' elemment, even though the other 3 elements conditions are also a truey.
-console.log(".find() method-->",filterArrayMethod)
+const filterArrayMethod = pastDueBalance.find(grabFirstOne=> grabFirstOne<0); //<-- should just return the '-100.00' elemment, even though the other 3 elements conditions are also a truey.
+console.log(".find() method-->",filterArrayMethod);
+
+// but... what if we want the element to be returned inside of an array?
+// we can use .findIndex() array method. lets try it out below
+
+const filterArrayMethod0 = pastDueBalance.findIndex(grabFirstOneInArray=> grabFirstOneInArray<-200); // <-- this reads 'loop through every index in pastDueBalance, iterating through the whole array, and return/find the first index that is smaller that -200. Which will be -8000. which is index 1
+console.log(".findIndex() method -->",filterArrayMethod0);
+
+
 
 
