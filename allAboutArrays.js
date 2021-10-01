@@ -183,6 +183,9 @@ return mixItAllUp + currentIngredients ;
 console.log(".reduce() method-->",pizzaSoup);
 
 // .find() array method
-// it is a twin of .filter() --> the difference is 
+// it is a twin of .filter() --> the difference is... it just returns the first element that meets the condition. It returns as just one as an element. Not inside an array.
+
+const filterArrayMethod = pastDueBalance.find(grabFirstOne=> grabFirstOne<0) //<-- should just return the '-100.00' elemment, even though the other 3 elements conditions are also a truey.
+console.log(".find() method-->",filterArrayMethod)
 
 
