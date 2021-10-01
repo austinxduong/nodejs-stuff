@@ -187,12 +187,23 @@ console.log(".reduce() method-->",pizzaSoup);
 
 const filterArrayMethod = pastDueBalance.find(grabFirstOne=> grabFirstOne<0); //<-- should just return the '-100.00' elemment, even though the other 3 elements conditions are also a truey.
 console.log(".find() method-->",filterArrayMethod);
+// 100.00 <-- what we just returned.
 
 // but... what if we want the element to be returned inside of an array?
-// we can use .findIndex() array method. lets try it out below
+// we can use .findIndex() array method. lets try it out below.
 
 const filterArrayMethod0 = pastDueBalance.findIndex(grabFirstOneInArray=> grabFirstOneInArray<-200); // <-- this reads 'loop through every index in pastDueBalance, iterating through the whole array, and return/find the first index that is smaller that -200. Which will be -8000. which is index 1
 console.log(".findIndex() method -->",filterArrayMethod0);
+// 1 <-- what we just returned.
+
+// lets get more mathy! using findIndex (oh gosh.... i suck at math).
+// here we goooo....... D:
+
+const beautifulArray = ['0,', '2', '8', '12','22', '33', '44', '55', '60', '88'];
+
+findDivisableIndexbyEleven = beautifulArray.findIndex(grabFirstDivisableNum=> grabFirstDivisableNum% 11 === 0); // <-- this reads return the first element by its index, that is divisble by 11
+console.log(findDivisableIndexbyEleven);
+// 4 <-- it returne index 4 of the array = '22' 
 
 
 
