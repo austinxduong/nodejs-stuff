@@ -7,7 +7,7 @@ fs.readFile('helloAustiWorld.txt', (err, data) => {
         console.error(err);
         return;
     }
-    console.log('reading a file old syntax', data.toString()); //<-- to grab "Hello World" in the .txt file, we need a ".toString()". it now shows the console log.
+    console.log('reading a file using callback function', data.toString()); //<-- to grab "Hello World" in the .txt file, we need a ".toString()". it now shows the console log.
 });
 // to see the asynchronus nature of node lets create another console.log 
 console.log('testing asynchronous nature of node');
@@ -18,7 +18,7 @@ console.log('testing asynchronous nature of node');
 // this is why our console.log on line 13 appears first, before our "Hello World" txt file
 
 
-// now... lets promisifying from the old syntax
+// now... lets promisifying from the callback function syntax
 fs.promises.readFile("helloAustiWorld.txt")
 .then(function(result) {
     console.log("reading a file promise"+result);
