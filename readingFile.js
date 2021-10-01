@@ -7,9 +7,9 @@ fs.readFile('helloAustiWorld.txt', (err, data) => {
         console.error(err);
         return;
     }
-    console.log(data.toString()); //<-- to grab "Hello World" in the .txt file, we need a ".toString()". it now shows the console log.
+    console.log('reading a file old syntax', data.toString()); //<-- to grab "Hello World" in the .txt file, we need a ".toString()". it now shows the console log.
 });
-//to see the asynchronus nature of node lets create another console.log 
+// to see the asynchronus nature of node lets create another console.log 
 console.log('testing asynchronous nature of node');
 
 // under the hood asynchornous explanation: node reads the file first on line 5
@@ -17,12 +17,14 @@ console.log('testing asynchronous nature of node');
 // once node is done reading the file on line 5, node will return the data on line 10
 // this is why our console.log on line 13 appears first, before our "Hello World" txt file
 
+
 // now... lets promisifying from the old syntax
-function promiseReadFile(fileName) {
-    return new Promise((resolve, reject) => {
-        readFile(fileName, (err, data) => {
-            if (err) {reject(err); }
-            else { resolve(data); }
-        });
-    });
-}
+fs.promises.readFile("helloAustiWorld.txt")
+.then(function(result) {
+    console.log("reading a file promise"+result);
+})
+.catch(function(error){
+    console.log(error);
+})
+
+// now... lets async await this from the promise syntax 
