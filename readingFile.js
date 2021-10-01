@@ -18,7 +18,7 @@ console.log('testing asynchronous nature of node');
 // this is why our console.log on line 13 appears first, before our "Hello World" txt file
 
 
-// now... lets promisifying from the callback function syntax
+// now... lets promisify, instead of using the callback function syntax
 fs.promises.readFile("helloAustiWorld.txt")
 .then(function(result) {
     console.log("reading a file promise"+result);
