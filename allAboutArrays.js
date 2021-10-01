@@ -7,13 +7,13 @@
 // to add, we use .push() array method. push() is also a pre-built javascript function we can  use out of the box. (pretty cool!)
 const pizza = ['pepperoni', 'cheese', 'supreme'];
 pizza.push('lemon zest greek styled');
-console.log(pizza);
+console.log(".push() method-->",pizza);
 
 // but... what if we want to add 'lemon zest greek styled' as the first one?
 // we can use an array method called 'unshift'.
 const pizza0 = ['pepperoni', 'cheese', 'supreme'];
 pizza0.unshift('lemon zest greek styled');
-console.log(pizza0);
+console.log(".unshift() method-->",pizza0);
 
 // but... what if only want to eat 'pepperoni', and 'cheese' pizza? no thanks to supreme for today (no veggies today pls D:)
 // we can use .pop() array method.
@@ -21,7 +21,7 @@ console.log(pizza0);
 
 const pizza1 = ['pepperoni', 'cheese', 'supreme'];
 pizza1.pop()
-console.log(pizza1);
+console.log(".pop() method-->",pizza1);
 
 // but... what if I only want to eat 'cheese' and 'supreme' pizza? 'pepperoni' pizza makes my stomach hurt for today for some reason.
 // we can use .shift() array method.
@@ -29,7 +29,7 @@ console.log(pizza1);
 
 const pizza2 = ['pepperoni', 'cheese', 'supreme'];
 pizza2.shift()
-console.log(pizza2);
+console.log(".shift() method-->",pizza2);
 
 // .slice() slices a chunk of an array, and returns that chunk.
 // but what chunk? all/each elements between the first index you select, to the last (last index isn't included in the chunk).
@@ -37,28 +37,28 @@ console.log(pizza2);
 // result: in our console we returned everything between index [1], to index [5]; BUT.. the first index is included in array, last index is not.
 // this happens when we pass in two index parameters as an arguement.
 const burntPizza = ['tip', 'tip middle', 'middle', 'top middle', 'top', 'crust'];
-console.log(burntPizza.slice(1,5));
+console.log(".slice() method -->",burntPizza.slice(1,5));
 
 // however... lets say the crust isn't burnt, and we want everything but the tip from this slice of pizza (yummy! garlic butter sauce please).
 // now... for the very last index to be included, we just passed in one index parameter, as an argument.
 const notBurntCrustPizza = ['tip', 'tip middle', 'middle', 'top middle', 'top', 'crust'];
-console.log(notBurntCrustPizza.slice(1));
+console.log(".slice() method-->",notBurntCrustPizza.slice(1));
 
 // finally.... if the whole pizza is not burnt and totally yummy?
 // we can make a whole carbon copy of the array. Simply pass no argument in the slice array method.
 const notBurntYummyPizza = ['tip', 'tip middle', 'middle', 'top middle', 'top', 'crust'];
-console.log(notBurntYummyPizza.slice());
+console.log(".slice() method-->",notBurntYummyPizza.slice());
 
 // .splice() array method pretty much is identical (twins).
 // ... the difference is that it mutates (updates) the original array.
 
 const burntPizza0 = ['tip', 'tip middle', 'middle', 'top middle', 'top', 'crust'];
-console.log(burntPizza0.splice(1,5));
-console.log(burntPizza0); //<-- the array is mutated, and 'tip' element is 'spliced into it's own seperated array.
+console.log(".splice() method-->",burntPizza0.splice(1,5));
+console.log(".splice() method-->",burntPizza0); //<-- the array is mutated, and 'tip' element is 'spliced into it's own seperated array.
 
 const burntPizza1 = ['tip', 'tip middle', 'middle', 'top middle', 'top', 'crust'];
-console.log(burntPizza1.splice(-1)); // <-- '-1' removes last element(index) aka 'crust'.
-console.log(burntPizza1); //<-- our mutated array no longer has 'crust'.
+console.log(".splice() method -->",burntPizza1.splice(-1)); // <-- '-1' removes last element(index) aka 'crust'.
+console.log(".splice() method-->",burntPizza1); //<-- our mutated array no longer has 'crust'.
 
 // we can also use .splice to inject/insert elements, without deleting anything (elements).
 // the '3' in our argument, tells the code "FROM where" to inject the new element.
@@ -68,23 +68,23 @@ console.log(burntPizza1); //<-- our mutated array no longer has 'crust'.
 // however, if we go past 3, no other elements will be deleted beyond that point. because we set the 'FROM where' to 3.
 const austi = ['austi', 'is', 'a', 'software', 'engineer'];
 austi.splice(3, 0, 'chill');
-console.log(austi);
+console.log(".splice() method-->",austi);
 
 //.reverse() will reverse the array
 const taco = ['tortilla', 'refried beans', 'grilled chicken', 'cheese', 'salsa', 'hot sauce'];
-console.log(taco.reverse());
-console.log(taco); // <-- the array gets mutated when using .reverse() array method.
+console.log(".reverse() method-->",taco.reverse());
+console.log(".reverse() method-->",taco); // <-- the array gets mutated when using .reverse() array method.
 
 //.concat() array method, joins two new arrays together.
 // lets cook up 1 huge array of; austi + taco.
 // we get an array of mixed taco ingredients, and austi being a chill software engineer.
 const austiTaco = taco.concat(austi)
-console.log(austiTaco);
+console.log(".concat() method-->",austiTaco);
 
 // .join() method returns an array of a single string, connected by a character you choose.
 
 const preschoolSingleFileLine = ['student1', 'student2', 'student3', 'student4', 'student5'];
-console.log(preschoolSingleFileLine.join('-')) //<--- now lets make sure all students are in a single file line.
+console.log(".join() method-->",preschoolSingleFileLine.join('-')) //<--- now lets make sure all students are in a single file line.
 //our console log returns this: // student1-student2-student3-student4-student5
 
 // forEach method is considred a higher order function (meaning were passing a callback function as an argument).
@@ -94,9 +94,9 @@ let i = 'austi\'s';
 
     checkingAccounts.forEach(function(checkingAccountParam, index, array){
         if(checkingAccountParam < 0) {
-            console.log(`${i} Checking Account: You Withdrew ${checkingAccountParam}`);
+            console.log(".forEach() method-->",`${i} Checking Account: You Withdrew ${checkingAccountParam}`);
         } else{
-        console.log(`${i} Checking Account: You Deposited ${checkingAccountParam}`);
+        console.log(".forEach() method-->",`${i} Checking Account: You Deposited ${checkingAccountParam}`);
         }
 });
 
@@ -115,8 +115,8 @@ const checkingAccountCash= checkingAccounts.map(function(convert){
     return creditToCash + convert;
 });
 
-console.log(checkingAccounts);
-console.log(checkingAccountCash)
+console.log(".map() method-->",checkingAccounts);
+console.log(".map() method-->",checkingAccountCash)
 
 /* below is our returned values
 [ '-100', '20.00', '-3.33', '4.44' ]
@@ -128,7 +128,7 @@ console.log(checkingAccountCash)
 const pastDuePayments= checkingAccounts.filter(function(collect){ // <-- all elements of array are passed through this callback function. if condition = true, a new array is returned with those selected elements (the past due payments :D).
     return collect < 0;
 });
-console.log(pastDuePayments)
+console.log(".filter() method -->", pastDuePayments)
 
 // [ '-100', '-3.33' ] <-- these are the past due payments we need to collect from client.
 
@@ -141,7 +141,7 @@ const add = waive => waive.reduce((element1, element2) => element1 + element2, 2
 const waive = [-100, -3.33];
 const total = add(waive);
 
-console.log(total);
+console.log(".reduce() method -->", total);
 //returned // 2118.67 <--- customer balance is reconciled. yayyyy :D
 
 
@@ -158,7 +158,7 @@ const totalPastDue = pastDueBalance.reduce(function(accumulator, currentValue, i
     return accumulator + Number(currentValue);
 },0);
 
-console.log(totalPastDue);
+console.log(".reduce() method -->", totalPastDue);
 
 // what if the customer sends in a Purchase Order with a deposit of 222,222.00 dollars?
 const pastDueBalance0 = ['-100.00', '-8888.00', '-22.00', '-44.00'];
@@ -167,7 +167,7 @@ const totalPastDue0 = pastDueBalance.reduce(function(accumulator, currentValue, 
     return accumulator + Number(currentValue);
 },222222.00); //<-- adjust the currentValue here
 
-console.log(totalPastDue0);
+console.log(".reduce() method-->",totalPastDue0);
 
 // this is what we returned below.
 // 213168 <--- now the customer has no longer past due balance. $222,222.00 less $90.54.
@@ -180,8 +180,9 @@ const pizzaSoup = pizza.reduce(function(mixItAllUp, currentIngredients){
 return mixItAllUp + currentIngredients ;
 
 },'but first RANCH!!! :D ...'); //<-- we can add a string data type, which will default as the beginning of the reduced array.
-console.log(pizzaSoup);
+console.log(".reduce() method-->",pizzaSoup);
 
-
+// .find() array method
+// it is a twin of .filter() --> the difference is 
 
 
