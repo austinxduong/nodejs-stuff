@@ -19,6 +19,7 @@ console.log('testing asynchronous nature of node');
 
 
 // now... lets promisify, instead of using the callback function syntax
+// a promise makes handling asynchronus operations easier, a placeholder for a task that hasn't finished yet, and will be executed later (or in the future). Hence "promise".
 fs.promises.readFile("helloAustiWorld.txt")
 .then(function(result) {
     console.log("reading a file promise"+result);
