@@ -1,6 +1,9 @@
 //here, we are demonstrating how to read a .text file
 // first, we import the prebuilt 'fs' module that comes with node.js
-const fs = require('fs');
+const fs = require('fs')
+const fsPromises = fs.promises;
+
+
 
 fs.readFile('helloAustiWorld.txt', (err, data) => {
     if (err) { //<-- line 6 thru 9 is what we call "error handling"
@@ -29,3 +32,8 @@ fs.promises.readFile("helloAustiWorld.txt")
 })
 
 // now... lets async await this from the promise syntax 
+// async/await hides the the operations of the "promise" syntax under the hood
+// in our modern era, it is much cleaner and easier code to read and much more teachable and less "gatekeepy", although important to understand at the core "under the hood"
+
+
+
