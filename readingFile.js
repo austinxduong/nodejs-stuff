@@ -48,6 +48,7 @@ fs.promises.readFile("helloAustiWorld.txt")
 // }
 // console.log(data.toString());
 
+//below is the the async/await style to read a file :D yayyyyy i did ittttttt!!
 async function readFile(readingAustiFile) {
 
     const fs = require('fs').promises;
