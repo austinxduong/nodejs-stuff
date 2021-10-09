@@ -12,3 +12,15 @@ console.log(thisisCalledALabel); //<-- terminate this statement with a semi :) t
 
 // orrr should it be this? <-- this is returned
 // tested. so yes. variables can be reassigned, when using "var"
+
+//you can also reassign the value without even delaring the "var" before the label when defining  variable //
+// for example
+
+var thisIsCalledALabel = "playing?";
+
+thisIsCalledALabel = "yes, playing maybe? and it works";
+
+console.log(thisIsCalledALabel);
+
+// ...see? :) 
+// it works? I guess :)
