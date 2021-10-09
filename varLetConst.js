@@ -32,7 +32,7 @@ console.log(thisIsCalledALabel);
 //local object, (localllllly objectiableeee?)
 function thisPartTypedHereIsCalledALabelOkieeee() {
 
-    var definingAVariableOutsideAnIfBlockStatement = "This is the valued of a nested variable inside another block statement";
+    var definingAVariableOutsideAnIfBlockStatement = "This is the valued of a nested variable outside another block statement";
 
     if (true) {
         console.log(definingAVariableOutsideAnIfBlockStatement);
