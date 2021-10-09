@@ -24,3 +24,26 @@ console.log(thisIsCalledALabel);
 
 // ...see? :) 
 // it works? I guess :)
+
+// "var" is Locally and Globally accessisable. what does that even mean?
+// well... pretty much means when you console log, and you have a variable inside another "if/else" block statement (or whatever block statement you want to call it idc). ---> when you console.log out the function with the nested variable, it will still return the set value of that variable... even if inside a block statement of your choise
+// for example:
+
+//local object, (localllllly objectiableeee?)
+function thisPartTypedHereIsCalledALabelOkieeee() {
+
+    var definingAVariableOutsideAnIfBlockStatement = "This is the valued of a nested variable inside another block statement";
+
+    if (true) {
+        console.log(definingAVariableOutsideAnIfBlockStatement);
+    }
+}
+
+//callling the function
+thisPartTypedHereIsCalledALabelOkieeee();
+
+// This is the valued of a nested variable inside another block statement <-- is what we returned
+
+
+
+
