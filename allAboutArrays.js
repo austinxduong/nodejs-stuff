@@ -238,7 +238,7 @@ const everyArrayMethod = [-3, -2, -1, 0, 1, 2, 3];
 let returnFalseyBooLeanEveryArrayMethod = everyArrayMethod.every(funcExpression => funcExpression > 2);
 
 console.log(".every() method return falsey -->",returnFalseyBooLeanEveryArrayMethod);
-//false
+// false
 
 // now, we will create condition so all elements return a boolean of truey
 const everyArrayMethod2 = [ -3, -2, -1, 0, 1, 2, 3];
@@ -247,6 +247,13 @@ let returnTrueyAllConditionIsMet = everyArrayMethod2.every(allConditionIsMet => 
 
 console.log(".every() method return truey-->",returnTrueyAllConditionIsMet);
 // true
+
+//.sort() array method iterates, through the array, applies the callback function, and returns the elements in ascending order
+// below shows the countires I'd love to visit one day, sorted alphabetically --> ascending to descending order
+const countriesIdLoveToVisitOneDay = ['Italy', 'Paris', 'Greece', 'Sweden', 'Austria', 'Scotland'];
+
+console.log(countriesIdLoveToVisitOneDay.sort());
+
 
 
 
