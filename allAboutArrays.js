@@ -202,11 +202,20 @@ console.log(".findIndex() method -->",filterArrayMethod0);
 const beautifulArray = [2, 8, 12, 22, 33, 44, 55, 60, 88];
 
 findDivisableIndexbyEleven = beautifulArray.findIndex(grabFirstDivisableNum => grabFirstDivisableNum % 11 === 0);  // <-- this reads return the first element by its index, that is divisble by 11
-console.log(findDivisableIndexbyEleven);
+console.log(".findIndex() method w/ modulo operator -->",findDivisableIndexbyEleven);
 // the % is a modulo operator. it reads loop through each index, iterating throughout the whole array, & find/return the first index that is divisble by 11 that has a remainder of 0
 // 3 <-- it returned index 3 of the array = '22' 
 
+//.include() array method
+// this methods returns a boolean of either; truey, or falsey
 
+const includeArrayMethod = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+
+let returnBooLeanIfThisIndexExistsInsideArray = includeArrayMethod.includes(22);
+
+console.log(".include() method -->",returnBooLeanIfThisIndexExistsInsideArray);
+
+// true 
 
 
 
