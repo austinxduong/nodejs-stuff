@@ -220,6 +220,7 @@ console.log(".include() method -->",returnBooLeanIfThisIndexExistsInsideArray);
 
 //.some() array method works the same as .includes() array method, except...
 //.some() looks checks for a condition, and if that condition is met, a boolean with be returned (truey, falsey)
+// only 1 element inside the array, needs to meet the condition. 
 
 const someArrayMethod = [2, 4, 6, 8, 10, 12];
 
@@ -228,6 +229,26 @@ let returnBooleanIfThisConditionIsMet = someArrayMethod.some(arrowFunctionExpres
 console.log(".some() array method -->",returnBooleanIfThisConditionIsMet);
 
 // true
+
+
+//.every() array method checks to make sure all elements meet the condition
+// below shows not all elements meet condition, we get a falsey
+const everyArrayMethod = [-3, -2, -1, 0, 1, 2, 3];
+
+let returnFalseyBooLeanEveryArrayMethod = everyArrayMethod.every(funcExpression => funcExpression > 2);
+
+console.log(".every() method return falsey -->",returnFalseyBooLeanEveryArrayMethod);
+//false
+
+// now, we will create condition so all elements return a boolean of truey
+const everyArrayMethod2 = [ -3, -2, -1, 0, 1, 2, 3];
+
+let returnTrueyAllConditionIsMet = everyArrayMethod2.every(allConditionIsMet => allConditionIsMet > -4);
+
+console.log(".every() method return truey-->",returnTrueyAllConditionIsMet);
+// true
+
+
 
 
 
