@@ -263,6 +263,25 @@ let toStringArrayMethodLetsGo = letsStringifyThisArray.toString();
 
 console.log(".toString() method -->",toStringArrayMethodLetsGo); 
 
+// .flat() array method "flattens" (consolodates) the array if it is nested.
+
+const messyNestedArrayOhNo = [[3,44,16], [11,22,33], 100, 200];
+
+console.log(messyNestedArrayOhNo.flat());
+
+//.flatMap() combines the method of .map() with .flat() 
+
+const flatMapArray = [2, 4, 6, 8];
+
+let result1 = flatMapArray.map(mutiplier => [mutiplier * 3]);
+// [ [ 6 ], [ 12 ], [ 18 ], [ 24 ] ]
+
+let result2 = flatMapArray.flatMap(mutiplier => [mutiplier * 3]);
+// [ 6, 12, 18, 24 ]
+
+console.log(".map() array method -->",result1)
+console.log(".flatMap() array method -->",result2)
+
 
 
 
