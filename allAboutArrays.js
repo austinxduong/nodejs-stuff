@@ -206,8 +206,9 @@ console.log(".findIndex() method w/ modulo operator -->",findDivisableIndexbyEle
 // the % is a modulo operator. it reads loop through each index, iterating throughout the whole array, & find/return the first index that is divisble by 11 that has a remainder of 0
 // 3 <-- it returned index 3 of the array = '22' 
 
-//.include() array method
-// this methods returns a boolean of either; truey, or falsey
+//.includes() array method
+//.includes method returns a boolean of either; truey, or falsey
+//.includes looks for the "equality" of the element, then returns a boolean
 
 const includeArrayMethod = [11, 22, 33, 44, 55, 66, 77, 88, 99];
 
@@ -216,6 +217,18 @@ let returnBooLeanIfThisIndexExistsInsideArray = includeArrayMethod.includes(22);
 console.log(".include() method -->",returnBooLeanIfThisIndexExistsInsideArray);
 
 // true 
+
+//.some() array method works the same as .includes() array method, except...
+//.some() looks checks for a condition, and if that condition is met, a boolean with be returned (truey, falsey)
+
+const someArrayMethod = [2, 4, 6, 8, 10, 12];
+
+let returnBooleanIfThisConditionIsMet = someArrayMethod.some(arrowFunctionExpression => arrowFunctionExpression > 8);
+
+console.log(".some() array method -->",returnBooleanIfThisConditionIsMet);
+
+// true
+
 
 
 
