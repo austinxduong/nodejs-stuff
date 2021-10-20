@@ -254,7 +254,14 @@ const countriesIdLoveToVisitOneDay = ['Italy', 'Paris', 'Greece', 'Sweden', 'Aus
 
 console.log(countriesIdLoveToVisitOneDay.sort());
 
+//[ 'Austria', 'Greece', 'Italy', 'Paris', 'Scotland', 'Sweden' ]
 
+// .toString() array method converts an array into a string
+const letsStringifyThisArray = ['chocolate','pizza', 'netflix', 'coding', 'friends', 'travel', 'the good life'];
+
+let toStringArrayMethodLetsGo = letsStringifyThisArray.toString();
+
+console.log(".toString() method -->",toStringArrayMethodLetsGo); 
 
 
 
