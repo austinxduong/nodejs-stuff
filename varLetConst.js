@@ -44,6 +44,14 @@ thisPartTypedHereIsCalledALabelOkieeee();
 
 // This is the valued of a nested variable inside another block statement <-- is what we returned
 
+//lets talk about Hoisting! :D
+
+thisIsHoistingAkaCallingBeforeDeclaring();
+
+function thisIsHoistingAkaCallingBeforeDeclaring() {
+    console.log("we just called this function, before even declaring it. and that's ok");
+}
+
 
 
 
