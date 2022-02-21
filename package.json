@@ -1,0 +1,24 @@
+{
+  "name": "setup-node",
+  "version": "1.0.0",
+  "description": "* just taking notes/creating node.js application from scratch * objective: practice \"under the hood\" theory/technical stuff in case",
+  "main": "allAboutArrays.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinxduong/nodejs-stuff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austinxduong/nodejs-stuff/issues"
+  },
+  "homepage": "https://github.com/austinxduong/nodejs-stuff#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
