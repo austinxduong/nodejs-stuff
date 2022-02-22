@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "* just taking notes/creating node.js application from scratch * objective: practice \"under the hood\" theory/technical stuff in case",
   "main": "allAboutArrays.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,12 @@
   },
   "homepage": "https://github.com/austinxduong/nodejs-stuff#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "node-fetch": "^3.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1"
   }
 }
