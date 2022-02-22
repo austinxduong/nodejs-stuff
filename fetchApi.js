@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 // Method #1 
 const fetchAPIArgument = "https://whispering-citadel-46770.herokuapp.com/api/v1/planets"
