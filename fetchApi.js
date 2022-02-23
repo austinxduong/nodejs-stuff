@@ -1,16 +1,25 @@
-// import fetch from 'node-fetch';
+// const regeneratorRuntime = require("regenerator-runtime");
 
 // Method #1 
-const fetchAPIArgument = "https://whispering-citadel-46770.herokuapp.com/api/v1/planets"
+// const fetchAPIArgument = "https://whispering-citadel-46770.herokuapp.com/api/v1/planets"
 
-async function getAPI(url) {
-    const res = await fetch(url)
+// async function getAPI() {
 
-    var data = await res.json();
-    console.log(data)
-}
+//     const url = "https://whispering-citadel-46770.herokuapp.com/api/v1/planets"
 
-getAPI(fetchAPIArgument)
+//     try {
+//         let res = await fetch(url)
+//         return await res.json()
+       
+//     } catch (error) {
+//         console.log(error)
+//     }
+    
+// }
+
+// getAPI(fetchAPIArgument)
+
+// export default fetchAPIArgument;
 
 /* Output
 }, {…}, {…}, {…}, {…}, {…}, {…}, 
@@ -21,17 +30,34 @@ getAPI(fetchAPIArgument)
 
 
 // Method #2
-let fetchResponse = fetch("https://whispering-citadel-46770.herokuapp.com/api/v1/planets")
-    fetchResponse.then(res => res.json())
-                 .then (data => {
-                    console.log(data)
-                 })
+
+    let fetchResponse = fetch("https://whispering-citadel-46770.herokuapp.com/api/v1/planets")
+        fetchResponse.then(res => res.json())
+                    .then (data => {
+                        console.log(data)
+                    })
 /* Output
 }, {…}, {…}, {…}, {…}, {…}, {…}, 
 {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…},
 {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, 
 {…}, {…}]
 */
+
+//  fetch("https://whispering-citadel-46770.herokuapp.com/api/v1/planets/")
+//     .then(res => {
+//         if (res.ok) {
+//             console.log("fetch connected")
+//         } else {
+//             console.log("fetch not connected")
+//         }
+//         res.json()
+//         })
+//     .then(data => console.log(data))
+//     .catch(error => console.log('FETCH FAILED'))
+
+
+
+
 
 
 

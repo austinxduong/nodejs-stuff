@@ -5,10 +5,14 @@
   "main": "allAboutArrays.js",
   "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "start": "node server.js"
   },
   "jest": {
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ],
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
     }
@@ -29,8 +33,11 @@
     "node-fetch": "^3.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "babel-jest": "^27.5.1",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "jest-fetch-mock": "^3.0.3",
+    "supertest": "^6.2.2"
   }
 }
