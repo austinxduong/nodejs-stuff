@@ -1,13 +1,27 @@
 const getAPI = require ('./fetchApi.js');
-const fetchResponse = require('./fetchApi.js')
+const fetching = require('./fetchApi.js')
+// const fetchHomemadeApi = require('./fetchApi.js')
+import { fetchHomemadeApi } from './fetchApi.js';
 
-describe('API mock test, gets all planets', async () => {
+
+const unmockedFetch = global.fetch
+
+beforeAll(() => {
+    global.fetch = () =>
+      Promise.resolve({
+        json: () => Promise.resolve([]),
+      })
+  })
+
+afterAll(() => {
+    global.fetch = unmockedFetch
+  })
+
+
     test('returns 200 status code', () => {
+         
+        const res = fetchHomemadeApi()
 
-        const response = fetchResponse
-
-    expect(response.statusCode).toBe(200)
-
+        console.log()
+    expect().toBe(200)
     })
-
-})
