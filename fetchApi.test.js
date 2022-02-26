@@ -1,9 +1,13 @@
-const fetchResponse = require ('./fetchApi')
+const getAPI = require ('./fetchApi.js');
+const fetchResponse = require('./fetchApi.js')
 
-test('fetches an API', () => {
+describe('API mock test, gets all planets', async () => {
+    test('returns 200 status code', () => {
 
-    let fetchResponse = fetch("https://whispering-citadel-46770.herokuapp.com/api/v1/planets")
+        const response = fetchResponse
 
-    const result = fetchResponse("Jupiter")
-    expect(result).toBe('Jupiter')
+    expect(response.statusCode).toBe(200)
+
+    })
+
 })
