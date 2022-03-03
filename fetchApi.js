@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 // alert('hi austi, script succesfully connected')
 
 // const regeneratorRuntime = require("regenerator-runtime");
@@ -62,33 +63,40 @@
 
 // Method #4
 
-export function fetchHomemadeApi() {
-    const res = fetch('https://whispering-citadel-46770.herokuapp.com/api/v1/planets/')
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(error => console.log('FETCH FAILED'))
+// export function fetchHomemadeApi() {
+//     const res = fetch('https://whispering-citadel-46770.herokuapp.com/api/v1/planets/')
+//         .then(res => res.json())
+//         .then(data => console.log(data))
+//         .catch(error => console.log('FETCH FAILED'))
+// }
+
+// fetchHomemadeApi()
+
+
+async function fetchHomemadeApi() {
+    const response = await fetch('https://whispering-citadel-46770.herokuapp.com/api/v1/planets/');
+    const json = await response.json();
+
+    return json
 }
 
-fetchHomemadeApi()
-
-
-// async function fetchHomemadeApi() {
-
-//     const res = await fetch('https://whispering-citadel-46770.herokuapp.com/api/v1/planets/');
-//     const json = res.json();
-
-//     return json
-// }
+console.log(await fetchHomemadeApi())
 
 
 //Method #5
+// async function fetchApi() {
+//     try {
+//         const response = await fetch('https://whispering-citadel-46770.herokuapp.com/api/v1/planets/');
 
+//         if (!response.ok) {
+//             throw new Error(`Fetch Failed!: ${response.status}`)
+//         }
 
+//         const result = await response.json() 
+//         return result
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }
 
-
-
-
-
-
-
-console.log("austi moved to the console")
+// console.log(await fetchApi())
