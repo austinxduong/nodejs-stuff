@@ -1,0 +1,46 @@
+{
+  "name": "setup-node",
+  "version": "1.0.0",
+  "description": "* just taking notes/creating node.js application from scratch * objective: practice \"under the hood\" theory/technical stuff in case",
+  "main": "allAboutArrays.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --watch",
+    "start": "node server.js"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinxduong/nodejs-stuff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austinxduong/nodejs-stuff/issues"
+  },
+  "homepage": "https://github.com/austinxduong/nodejs-stuff#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "node-fetch": "^3.2.1",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/runtime-corejs3": "^7.17.2",
+    "babel-jest": "^27.5.1",
+    "core-js": "^3.21.1",
+    "jest": "^27.5.1",
+    "jest-fetch-mock": "^3.0.3",
+    "supertest": "^6.2.2"
+  }
+}
