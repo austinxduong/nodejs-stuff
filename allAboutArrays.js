@@ -202,9 +202,85 @@ console.log(".findIndex() method -->",filterArrayMethod0);
 const beautifulArray = [2, 8, 12, 22, 33, 44, 55, 60, 88];
 
 findDivisableIndexbyEleven = beautifulArray.findIndex(grabFirstDivisableNum => grabFirstDivisableNum % 11 === 0);  // <-- this reads return the first element by its index, that is divisble by 11
-console.log(findDivisableIndexbyEleven);
+console.log(".findIndex() method w/ modulo operator -->",findDivisableIndexbyEleven);
 // the % is a modulo operator. it reads loop through each index, iterating throughout the whole array, & find/return the first index that is divisble by 11 that has a remainder of 0
 // 3 <-- it returned index 3 of the array = '22' 
+
+//.includes() array method
+//.includes method returns a boolean of either; truey, or falsey
+//.includes looks for the "equality" of the element, then returns a boolean
+
+const includeArrayMethod = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+
+let returnBooLeanIfThisIndexExistsInsideArray = includeArrayMethod.includes(22);
+
+console.log(".include() method -->",returnBooLeanIfThisIndexExistsInsideArray);
+
+// true 
+
+//.some() array method works the same as .includes() array method, except...
+//.some() looks checks for a condition, and if that condition is met, a boolean with be returned (truey, falsey)
+// only 1 element inside the array, needs to meet the condition. 
+
+const someArrayMethod = [2, 4, 6, 8, 10, 12];
+
+let returnBooleanIfThisConditionIsMet = someArrayMethod.some(arrowFunctionExpression => arrowFunctionExpression > 8);
+
+console.log(".some() array method -->",returnBooleanIfThisConditionIsMet);
+
+// true
+
+
+//.every() array method checks to make sure all elements meet the condition
+// below shows not all elements meet condition, we get a falsey
+const everyArrayMethod = [-3, -2, -1, 0, 1, 2, 3];
+
+let returnFalseyBooLeanEveryArrayMethod = everyArrayMethod.every(funcExpression => funcExpression > 2);
+
+console.log(".every() method return falsey -->",returnFalseyBooLeanEveryArrayMethod);
+// false
+
+// now, we will create condition so all elements return a boolean of truey
+const everyArrayMethod2 = [ -3, -2, -1, 0, 1, 2, 3];
+
+let returnTrueyAllConditionIsMet = everyArrayMethod2.every(allConditionIsMet => allConditionIsMet > -4);
+
+console.log(".every() method return truey-->",returnTrueyAllConditionIsMet);
+// true
+
+//.sort() array method iterates, through the array, applies the callback function, and returns the elements in ascending order
+// below shows the countires I'd love to visit one day, sorted alphabetically --> ascending to descending order
+const countriesIdLoveToVisitOneDay = ['Italy', 'Paris', 'Greece', 'Sweden', 'Austria', 'Scotland'];
+
+console.log(countriesIdLoveToVisitOneDay.sort());
+
+//[ 'Austria', 'Greece', 'Italy', 'Paris', 'Scotland', 'Sweden' ]
+
+// .toString() array method converts an array into a string
+const letsStringifyThisArray = ['chocolate','pizza', 'netflix', 'coding', 'friends', 'travel', 'the good life'];
+
+let toStringArrayMethodLetsGo = letsStringifyThisArray.toString();
+
+console.log(".toString() method -->",toStringArrayMethodLetsGo); 
+
+// .flat() array method "flattens" (consolodates) the array if it is nested.
+
+const messyNestedArrayOhNo = [[3,44,16], [11,22,33], 100, 200];
+
+console.log(messyNestedArrayOhNo.flat());
+
+//.flatMap() combines the method of .map() with .flat() 
+
+const flatMapArray = [2, 4, 6, 8];
+
+let result1 = flatMapArray.map(mutiplier => [mutiplier * 3]);
+// [ [ 6 ], [ 12 ], [ 18 ], [ 24 ] ]
+
+let result2 = flatMapArray.flatMap(mutiplier => [mutiplier * 3]);
+// [ 6, 12, 18, 24 ]
+
+console.log(".map() array method -->",result1)
+console.log(".flatMap() array method -->",result2)
 
 
 

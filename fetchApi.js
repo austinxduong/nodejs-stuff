@@ -99,7 +99,11 @@ export async function fetchApi() {
     }
 }
 
+<<<<<<< HEAD
 // must await (or .then) when calling fetchAPI
 // await will return the json data to the console/terminal
 // Promise { <pending> } shows, when 'await' is omitted 
 console.log(await fetchApi())
+=======
+console.log("austi moved to the console")
+>>>>>>> main
