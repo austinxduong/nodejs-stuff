@@ -1,27 +1,24 @@
 const getAPI = require ('./fetchApi.js');
 const fetching = require('./fetchApi.js')
-// const fetchHomemadeApi = require('./fetchApi.js')
-import { fetchHomemadeApi } from './fetchApi.js';
+// const fetchApi = require('./fetchApi.js')
+import fetchApi from './fetchApi'
 
-
-const unmockedFetch = global.fetch
-
-beforeAll(() => {
-    global.fetch = () =>
-      Promise.resolve({
-        json: () => Promise.resolve([]),
-      })
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+    json: () => Promise.resolve({ rates: { CAD: 1.42 } }),
   })
+);
 
-afterAll(() => {
-    global.fetch = unmockedFetch
-  })
+beforeEach(() => {
+  fetch.mockClear();
+});
 
 
-    test('returns 200 status code', () => {
+test('returns 200 status code', async () => {
          
-        const res = fetchHomemadeApi()
+const json = await fetchApi();
 
-        console.log()
-    expect().toBe(200)
-    })
+  
+  expect(json).toBe(200)
+})
+  
