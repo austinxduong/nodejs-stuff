@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 // alert('hi austi, script succesfully connected')
 
 // const regeneratorRuntime = require("regenerator-runtime");
@@ -79,15 +80,30 @@
 //     return json
 // }
 
+// console.log(await fetchHomemadeApi())
+
 
 //Method #5
+export async function fetchApi() {
+    try {
+        const response = await fetch('https://whispering-citadel-46770.herokuapp.com/api/v1/planets/');
 
+        if (!response.ok) {
+            throw new Error(`Fetch Failed!: ${response.status}`)
+        }
 
+        const result = await response.json() 
+        return result
+    } catch (err) {
+        console.log(err)
+    }
+}
 
-
-
-
-
-
-
+<<<<<<< HEAD
+// must await (or .then) when calling fetchAPI
+// await will return the json data to the console/terminal
+// Promise { <pending> } shows, when 'await' is omitted 
+console.log(await fetchApi())
+=======
 console.log("austi moved to the console")
+>>>>>>> main

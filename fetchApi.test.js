@@ -21,4 +21,8 @@ const json = await fetchApi();
   
   expect(json).toBe(200)
 })
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> main
