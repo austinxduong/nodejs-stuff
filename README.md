@@ -7,5 +7,6 @@ austi's [lego](https://barossa.coop/benefits-of-lego-play/#:~:text=Lego%20teache
 * just taking notes/creating node.js application from scratch
 * objective: practice "under the hood" theory/technical stuff in case
 
-#### <em> 💡 *note to self: run `git init` within terminal to initialize repository, or `git init -y` to skip all questions (this is easier tbh).</em>
+#### <em> 💡 `npm init -y ` (default settings/skips questions)
+  - initilizes package.json containing our scripts, & dependencies.
 
